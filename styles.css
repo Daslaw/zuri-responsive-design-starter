@@ -9,6 +9,7 @@
 
 div.nav-bar {
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
     padding: 1rem 6rem;
     width: 100vw;
@@ -154,6 +155,7 @@ div.snapshot-box {
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-wrap: wrap;
     background: #f0f0f0;
     padding: 4rem 6rem;
 }
@@ -161,6 +163,7 @@ div.snapshot-box {
 div.snapshot-box-content {
     display: flex;
     justify-content: space-between;
+    flex-wrap: wrap;
 }
 
 div.box1 {
@@ -209,8 +212,10 @@ div.box1 h5 {
 }
 
 div.gallery-section {
+    display: flex;
     background: #fff;
     padding: 4rem;
+    flex-wrap: wrap;
 }
 
 div.gallery-content {
@@ -345,3 +350,47 @@ div.footer h6 {
     font-size: 1rem;
     padding-top: 6rem;
 }
+
+@media screen and (max-width: 768px) {
+    div.gallery-section {
+      width: 50%;
+    }
+    div.nav-bar {
+        width: 100%;
+        position: fixed;
+        left: -100%;
+        top: 5rem;
+        flex-direction: column;
+        background-color: #fff;
+        width: 100%;
+        border-radius: 10px;
+        text-align: center;
+        transition: 0.3s;
+        box-shadow:
+            0 10px 27px rgba(0, 0, 0, 0.05);
+    }
+div .nav-items{
+    margin: 2.5rem 0;
+}
+    div .nav-links{
+        left: 0;
+    }
+    div .snapshot-box{
+        width: 100%;
+    }
+    div.snapshot-box-content{
+        width: 100%; 
+    }
+  }
+
+  @media screen and (max-width: 480px) {
+    div.nav-bar {
+        width: 100%;
+    }
+    .div.gallery-section {
+      width: 100%;
+    }
+    div .snapshot-box{
+        width: 100%;
+    }
+  }
